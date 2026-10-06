@@ -1,0 +1,7 @@
+{
+    "Admin": true,
+    "HRM": true,
+    "Canteen": true,
+    "Reception": true,
+    "Approval": true
+}
