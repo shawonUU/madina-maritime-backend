@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\Approval\Models;
+namespace Modules\Approval\App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Modules\Approval\Models\ApprovalWorkflowLevel;
-use Modules\Approval\Models\User;
+use Modules\Approval\App\Models\ApprovalWorkflowLevel;
+use Modules\Approval\App\Models\User;
 
 class ApprovalWorkflow extends Model
 {

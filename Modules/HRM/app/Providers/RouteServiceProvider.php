@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\HRM\Providers;
+namespace Modules\HRM\App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;

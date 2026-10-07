@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Approval\Http\Controllers;
+namespace Modules\Approval\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Modules\Approval\Models\ApprovalRequest;
+use Modules\Approval\App\Models\ApprovalRequest;
 use Modules\Approval\Services\ApprovalService;
 
 class ApprovalController extends Controller

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Meal\Http\Controllers\MealController;
+use Modules\Canteen\App\Http\Controllers\MealMenuController;
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::resource('meals', MealController::class)->names('meal');
+    Route::resource('meals', MealMenuController::class)->names('meal');
 });

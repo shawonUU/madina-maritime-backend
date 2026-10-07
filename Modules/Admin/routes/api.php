@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Admin\Http\Controllers\AuthController;
-use Modules\Admin\Http\Controllers\ChildMenuController;
-use Modules\Admin\Http\Controllers\MenuController;
-use Modules\Admin\Http\Controllers\ModuleController;
-use Modules\Admin\Http\Controllers\PermissionController;
-use Modules\Admin\Http\Controllers\RoleController;
-use Modules\Admin\Http\Controllers\UserAccessController;
-use Modules\Admin\Http\Controllers\UserController;
-use Modules\Admin\Http\Controllers\UserPermissionController;
+use Modules\Admin\App\Http\Controllers\AuthController;
+use Modules\Admin\App\Http\Controllers\ChildMenuController;
+use Modules\Admin\App\Http\Controllers\MenuController;
+use Modules\Admin\App\Http\Controllers\ModuleController;
+use Modules\Admin\App\Http\Controllers\PermissionController;
+use Modules\Admin\App\Http\Controllers\RoleController;
+use Modules\Admin\App\Http\Controllers\UserAccessController;
+use Modules\Admin\App\Http\Controllers\UserController;
+use Modules\Admin\App\Http\Controllers\UserPermissionController;
 
 
 // Public routes
@@ -18,7 +18,7 @@ Route::prefix('auth')->group(function () {
     Route::post('/register', [AuthController::class, 'register']);
 });
 
-// Protected routes (Sanctum লাগবে)
+// Protected routes (Sanctum à¦²à¦¾à¦—à¦¬à§‡)
 Route::middleware('auth:sanctum')->prefix('auth')->group(function () {
     Route::get('/me', [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);

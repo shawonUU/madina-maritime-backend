@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Admin\Http\Controllers;
+namespace Modules\Admin\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Modules\Approval\Models\ApprovalWorkflow;
-use Modules\Approval\Models\ApprovalWorkflowLevel;
+use Modules\Approval\App\Models\ApprovalWorkflow;
+use Modules\Approval\App\Models\ApprovalWorkflowLevel;
 
 class ApprovalWorkflowController extends Controller
 {

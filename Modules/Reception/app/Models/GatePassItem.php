@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Reception\Models;
+namespace Modules\Reception\App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Modules\Admin\Models\User;
+use Modules\Admin\App\Models\User;
 // use Modules\Reception\Database\Factories\GatePassItemFactory;
 
 class GatePassItem extends Model

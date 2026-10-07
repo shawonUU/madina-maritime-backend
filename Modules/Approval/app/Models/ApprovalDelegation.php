@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Approval\Models;
+namespace Modules\Approval\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\Approval\Models\User;
+use Modules\Approval\App\Models\User;
 
 class ApprovalDelegation extends Model
 {

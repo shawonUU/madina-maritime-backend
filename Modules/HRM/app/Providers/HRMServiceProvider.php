@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\HRM\Providers;
+namespace Modules\HRM\App\Providers;
 
 use Nwidart\Modules\Support\ModuleServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\HRM\Models;
+namespace Modules\HRM\App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
-use Modules\Admin\Models\User;
+use Modules\Admin\App\Models\User;
 use Spatie\Permission\Traits\HasRoles;
 // use Modules\Employee\Database\Factories\EmployeeFactory;
 

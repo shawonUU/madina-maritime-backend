@@ -5,13 +5,12 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-
+use Modules\Admin\App\Models\Module;
+use Modules\Admin\App\Models\User;
+use Modules\Admin\App\Models\UserAccess;
 use Modules\Admin\Database\Seeders\MenuSeeder;
-use Modules\Admin\Models\User;
-use Modules\Admin\Models\UserAccess;
-use Modules\Admin\Models\Module;
-
 use Modules\Canteen\Database\Seeders\MealDatabaseSeeder;
+use Modules\HRM\Database\Seeders\RecruitmentEmailTemplateSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -41,6 +40,15 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             MenuSeeder::class,
+        ]);
+
+/*
+        |--------------------------------------------------------------------------
+        | Recruitment Email Template Seeder
+        |--------------------------------------------------------------------------
+        */
+        $this->call([
+            RecruitmentEmailTemplateSeeder::class,
         ]);
 
 

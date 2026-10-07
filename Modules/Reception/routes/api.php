@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Reception\Http\Controllers\GatePassController;
-use Modules\Reception\Http\Controllers\ReceptionController;
+use Modules\Reception\App\Http\Controllers\GatePassController;
+use Modules\Reception\App\Http\Controllers\ReceptionController;
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::apiResource('receptions', ReceptionController::class)->names('reception');

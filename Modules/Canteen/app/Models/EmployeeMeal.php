@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Canteen\Models;
+namespace Modules\Canteen\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Modules\Admin\Models\User;
-use Modules\HRM\Models\Employee;
+use Modules\Admin\App\Models\User;
+use Modules\HRM\App\Models\Employee;
 // use Modules\Meal\Database\Factories\EmployeeMealFactory;
 
 class EmployeeMeal extends Model

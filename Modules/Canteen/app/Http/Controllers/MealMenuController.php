@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Canteen\Http\Controllers;
+namespace Modules\Canteen\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 use Modules\Approval\Services\ApprovalService;
-use Modules\Canteen\Models\EmployeeMeal;
-use Modules\Canteen\Models\EmployeeMealItem;
-use Modules\Canteen\Models\MealMenu;
-use Modules\Canteen\Models\MealType;
-use Modules\Canteen\Models\MenuItem;
+use Modules\Canteen\App\Models\EmployeeMeal;
+use Modules\Canteen\App\Models\EmployeeMealItem;
+use Modules\Canteen\App\Models\MealMenu;
+use Modules\Canteen\App\Models\MealType;
+use Modules\Canteen\App\Models\MenuItem;
 
 class MealMenuController extends Controller
 {
@@ -413,7 +413,7 @@ public function show($id)
         | We need the old date + meal type because admin may change:
         |
         | 01 Sep Lunch
-        |        ↓
+        |        Ã¢â€ â€œ
         | 02 Sep Dinner
         |
         */

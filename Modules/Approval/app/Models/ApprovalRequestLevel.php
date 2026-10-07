@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Approval\Models;
+namespace Modules\Approval\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\Admin\Models\User;
-use Modules\Approval\Models\ApprovalRequest;
+use Modules\Admin\App\Models\User;
+use Modules\Approval\App\Models\ApprovalRequest;
 
 class ApprovalRequestLevel extends Model
 {

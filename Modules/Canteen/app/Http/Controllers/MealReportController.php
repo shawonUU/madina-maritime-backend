@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Canteen\Http\Controllers;
+namespace Modules\Canteen\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Modules\Canteen\Models\MealType;
+use Modules\Canteen\App\Models\MealType;
 
 class MealReportController extends Controller
 {

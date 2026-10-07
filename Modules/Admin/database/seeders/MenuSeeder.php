@@ -3,9 +3,9 @@
 namespace Modules\Admin\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Admin\Models\Module;
-use Modules\Admin\Models\Menu;
-use Modules\Admin\Models\ChildMenu;
+use Modules\Admin\App\Models\Module;
+use Modules\Admin\App\Models\Menu;
+use Modules\Admin\App\Models\ChildMenu;
 
 class MenuSeeder extends Seeder
 {
@@ -18,203 +18,204 @@ class MenuSeeder extends Seeder
             | Approval Management
             |--------------------------------------------------------------------------
             */
-            [
-                'name' => 'Approval Management',
-                'slug' => 'approval',
-                'icon' => 'ClipboardCheck',
-                'sort_order' => 1,
-                'is_active' => true,
+            // [
+            //     'name' => 'Approval Management',
+            //     'slug' => 'approval',
+            //     'icon' => 'ClipboardCheck',
+            //     'sort_order' => 1,
+            //     'is_active' => true,
 
-                'menus' => [
-                    [
-                        'name' => 'Approval Workflows',
-                        'slug' => 'approval-workflow',
-                        'route' => null,
-                        'permission' => null,
-                        'icon' => 'Circle',
-                        'sort_order' => 1,
-                        'is_active' => true,
+            //     'menus' => [
+            //         [
+            //             'name' => 'Approval Workflows',
+            //             'slug' => 'approval-workflow',
+            //             'route' => null,
+            //             'permission' => null,
+            //             'icon' => 'Circle',
+            //             'sort_order' => 1,
+            //             'is_active' => true,
 
-                        'child_menus' => [
-                            [
-                                'name' => 'Workflow List',
-                                'slug' => 'workflow-list',
-                                'route' => '/approval/workflows',
-                                'permission' => 'approval_workflow.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 1,
-                                'is_active' => true,
-                            ],
-                        ],
-                    ],
+            //             'child_menus' => [
+            //                 [
+            //                     'name' => 'Workflow List',
+            //                     'slug' => 'workflow-list',
+            //                     'route' => '/approval/workflows',
+            //                     'permission' => 'approval_workflow.view',
+            //                     'icon' => 'CircleDot',
+            //                     'sort_order' => 1,
+            //                     'is_active' => true,
+            //                 ],
+            //             ],
+            //         ],
 
-                    [
-                        'name' => 'Pending Approvals',
-                        'slug' => 'pending-approval',
-                        'route' => null,
-                        'permission' => null,
-                        'icon' => 'Circle',
-                        'sort_order' => 2,
-                        'is_active' => true,
+            //         [
+            //             'name' => 'Pending Approvals',
+            //             'slug' => 'pending-approval',
+            //             'route' => null,
+            //             'permission' => null,
+            //             'icon' => 'Circle',
+            //             'sort_order' => 2,
+            //             'is_active' => true,
 
-                        'child_menus' => [
-                            [
-                                'name' => 'Pending Approval List',
-                                'slug' => 'pending-approval-list',
-                                'route' => '/approval/pending',
-                                'permission' => 'pending_approval.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 1,
-                                'is_active' => true,
-                            ],
-                        ],
-                    ],
-                ],
-            ],
+            //             'child_menus' => [
+            //                 [
+            //                     'name' => 'Pending Approval List',
+            //                     'slug' => 'pending-approval-list',
+            //                     'route' => '/approval/pending',
+            //                     'permission' => 'pending_approval.view',
+            //                     'icon' => 'CircleDot',
+            //                     'sort_order' => 1,
+            //                     'is_active' => true,
+            //                 ],
+            //             ],
+            //         ],
+            //     ],
+            // ],
 
             /*
             |--------------------------------------------------------------------------
             | Canteen Management
             |--------------------------------------------------------------------------
             */
-            [
-                'name' => 'Canteen Management',
-                'slug' => 'canteen',
-                'icon' => 'Utensils',
-                'sort_order' => 2,
-                'is_active' => true,
 
-                'menus' => [
+            // [
+            //     'name' => 'Canteen Management',
+            //     'slug' => 'canteen',
+            //     'icon' => 'Utensils',
+            //     'sort_order' => 2,
+            //     'is_active' => true,
 
-                    [
-                        'name' => 'Meal Type',
-                        'slug' => 'meal-type',
-                        'route' => null,
-                        'permission' => null,
-                        'icon' => 'Circle',
-                        'sort_order' => 1,
-                        'is_active' => true,
+            //     'menus' => [
 
-                        'child_menus' => [
-                            [
-                                'name' => 'Meal Type List',
-                                'slug' => 'meal-type-list',
-                                'route' => '/canteen/meal-types',
-                                'permission' => 'meal_type.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 1,
-                                'is_active' => true,
-                            ],
-                        ],
-                    ],
+            //         [
+            //             'name' => 'Meal Type',
+            //             'slug' => 'meal-type',
+            //             'route' => null,
+            //             'permission' => null,
+            //             'icon' => 'Circle',
+            //             'sort_order' => 1,
+            //             'is_active' => true,
 
-                    [
-                        'name' => 'Meal Menu',
-                        'slug' => 'meal-menu',
-                        'route' => null,
-                        'permission' => null,
-                        'icon' => 'Circle',
-                        'sort_order' => 2,
-                        'is_active' => true,
+            //             'child_menus' => [
+            //                 [
+            //                     'name' => 'Meal Type List',
+            //                     'slug' => 'meal-type-list',
+            //                     'route' => '/canteen/meal-types',
+            //                     'permission' => 'meal_type.view',
+            //                     'icon' => 'CircleDot',
+            //                     'sort_order' => 1,
+            //                     'is_active' => true,
+            //                 ],
+            //             ],
+            //         ],
 
-                        'child_menus' => [
-                            [
-                                'name' => 'Meal Menu List',
-                                'slug' => 'meal-menu-list',
-                                'route' => '/canteen/meal-menus',
-                                'permission' => 'meal_menu.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 1,
-                                'is_active' => true,
-                            ],
-                        ],
-                    ],
+            //         [
+            //             'name' => 'Meal Menu',
+            //             'slug' => 'meal-menu',
+            //             'route' => null,
+            //             'permission' => null,
+            //             'icon' => 'Circle',
+            //             'sort_order' => 2,
+            //             'is_active' => true,
 
-                    [
-                        'name' => 'Meal Booking',
-                        'slug' => 'meal-booking',
-                        'route' => null,
-                        'permission' => null,
-                        'icon' => 'Circle',
-                        'sort_order' => 3,
-                        'is_active' => true,
+            //             'child_menus' => [
+            //                 [
+            //                     'name' => 'Meal Menu List',
+            //                     'slug' => 'meal-menu-list',
+            //                     'route' => '/canteen/meal-menus',
+            //                     'permission' => 'meal_menu.view',
+            //                     'icon' => 'CircleDot',
+            //                     'sort_order' => 1,
+            //                     'is_active' => true,
+            //                 ],
+            //             ],
+            //         ],
 
-                        'child_menus' => [
-                            [
-                                'name' => 'Meal Booking List',
-                                'slug' => 'meal-booking-list',
-                                'route' => '/canteen/meal-bookings',
-                                'permission' => 'meal_booking.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 1,
-                                'is_active' => true,
-                            ],
-                        ],
-                    ],
+            //         [
+            //             'name' => 'Meal Booking',
+            //             'slug' => 'meal-booking',
+            //             'route' => null,
+            //             'permission' => null,
+            //             'icon' => 'Circle',
+            //             'sort_order' => 3,
+            //             'is_active' => true,
 
-                    [
-                        'name' => 'Serve Meal',
-                        'slug' => 'serve-meal',
-                        'route' => null,
-                        'permission' => null,
-                        'icon' => 'Circle',
-                        'sort_order' => 4,
-                        'is_active' => true,
+            //             'child_menus' => [
+            //                 [
+            //                     'name' => 'Meal Booking List',
+            //                     'slug' => 'meal-booking-list',
+            //                     'route' => '/canteen/meal-bookings',
+            //                     'permission' => 'meal_booking.view',
+            //                     'icon' => 'CircleDot',
+            //                     'sort_order' => 1,
+            //                     'is_active' => true,
+            //                 ],
+            //             ],
+            //         ],
 
-                        'child_menus' => [
-                            [
-                                'name' => 'Serve Meal',
-                                'slug' => 'serve-meal-list',
-                                'route' => '/canteen/serve-meal',
-                                'permission' => 'serve_meal.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 1,
-                                'is_active' => true,
-                            ],
-                        ],
-                    ],
+            //         [
+            //             'name' => 'Serve Meal',
+            //             'slug' => 'serve-meal',
+            //             'route' => null,
+            //             'permission' => null,
+            //             'icon' => 'Circle',
+            //             'sort_order' => 4,
+            //             'is_active' => true,
 
-                ],
-            ],
+            //             'child_menus' => [
+            //                 [
+            //                     'name' => 'Serve Meal',
+            //                     'slug' => 'serve-meal-list',
+            //                     'route' => '/canteen/serve-meal',
+            //                     'permission' => 'serve_meal.view',
+            //                     'icon' => 'CircleDot',
+            //                     'sort_order' => 1,
+            //                     'is_active' => true,
+            //                 ],
+            //             ],
+            //         ],
+
+            //     ],
+            // ],
 
             /*
             |--------------------------------------------------------------------------
             | Reception Management
             |--------------------------------------------------------------------------
             */
-            [
-                'name' => 'Reception Management',
-                'slug' => 'reception',
-                'icon' => 'Building2',
-                'sort_order' => 3,
-                'is_active' => true,
+            // [
+            //     'name' => 'Reception Management',
+            //     'slug' => 'reception',
+            //     'icon' => 'Building2',
+            //     'sort_order' => 3,
+            //     'is_active' => true,
 
-                'menus' => [
+            //     'menus' => [
 
-                    [
-                        'name' => 'Gate Pass',
-                        'slug' => 'gatepass',
-                        'route' => null,
-                        'permission' => null,
-                        'icon' => 'Circle',
-                        'sort_order' => 1,
-                        'is_active' => true,
+            //         [
+            //             'name' => 'Gate Pass',
+            //             'slug' => 'gatepass',
+            //             'route' => null,
+            //             'permission' => null,
+            //             'icon' => 'Circle',
+            //             'sort_order' => 1,
+            //             'is_active' => true,
 
-                        'child_menus' => [
-                            [
-                                'name' => 'Create Gate Pass Request',
-                                'slug' => 'create-gatepass-request',
-                                'route' => '/reception/gatepass/create-gatepass-request',
-                                'permission' => 'gate_pass.create',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 1,
-                                'is_active' => true,
-                            ],
-                        ],
-                    ],
+            //             'child_menus' => [
+            //                 [
+            //                     'name' => 'Create Gate Pass Request',
+            //                     'slug' => 'create-gatepass-request',
+            //                     'route' => '/reception/gatepass/create-gatepass-request',
+            //                     'permission' => 'gate_pass.create',
+            //                     'icon' => 'CircleDot',
+            //                     'sort_order' => 1,
+            //                     'is_active' => true,
+            //                 ],
+            //             ],
+            //         ],
 
-                ],
-            ],
+            //     ],
+            // ],
 
             /*
             |--------------------------------------------------------------------------
@@ -230,9 +231,31 @@ class MenuSeeder extends Seeder
 
                 'menus' => [
 
+                    // [
+                    //     'name' => 'Employee Management',
+                    //     'slug' => 'employee-management',
+                    //     'route' => null,
+                    //     'permission' => null,
+                    //     'icon' => 'Circle',
+                    //     'sort_order' => 1,
+                    //     'is_active' => true,
+
+                    //     'child_menus' => [
+                    //         [
+                    //             'name' => 'Employee List',
+                    //             'slug' => 'employee-list',
+                    //             'route' => '/hrm/employees',
+                    //             'permission' => 'employee.view',
+                    //             'icon' => 'CircleDot',
+                    //             'sort_order' => 1,
+                    //             'is_active' => true,
+                    //         ],
+                    //     ],
+                    // ],
+
                     [
-                        'name' => 'Employee Management',
-                        'slug' => 'employee-management',
+                        'name' => 'Recruitment',
+                        'slug' => 'recruitment',
                         'route' => null,
                         'permission' => null,
                         'icon' => 'Circle',
@@ -241,16 +264,25 @@ class MenuSeeder extends Seeder
 
                         'child_menus' => [
                             [
-                                'name' => 'Employee List',
-                                'slug' => 'employee-list',
-                                'route' => '/hrm/employees',
-                                'permission' => 'employee.view',
+                                'name' => 'Job Posts',
+                                'slug' => 'job-posts',
+                                'route' => '/hrm/job-posts',
+                                'permission' => 'job_post.view',
+                                'icon' => 'CircleDot',
+                                'sort_order' => 1,
+                                'is_active' => true,
+                            ],
+                            [
+                                'name' => 'Applications',
+                                'slug' => 'applications',
+                                'route' => '/hrm/applications',
+                                'permission' => 'applications.view',
                                 'icon' => 'CircleDot',
                                 'sort_order' => 1,
                                 'is_active' => true,
                             ],
                         ],
-                    ],
+                    ]
 
                 ],
             ],
@@ -261,8 +293,8 @@ class MenuSeeder extends Seeder
             |--------------------------------------------------------------------------
             */
             [
-                'name' => 'Admin',
-                'slug' => 'admin',
+                'name' => 'Settings',
+                'slug' => 'settings',
                 'icon' => 'Settings',
                 'sort_order' => 5,
                 'is_active' => true,
@@ -334,25 +366,25 @@ class MenuSeeder extends Seeder
                                 'is_active' => true,
                             ],
 
-                            [
-                                'name' => 'Permission',
-                                'slug' => 'permission',
-                                'route' => '/admin/permissions',
-                                'permission' => 'permission.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 2,
-                                'is_active' => true,
-                            ],
+                            // [
+                            //     'name' => 'Permission',
+                            //     'slug' => 'permission',
+                            //     'route' => '/admin/permissions',
+                            //     'permission' => 'permission.view',
+                            //     'icon' => 'CircleDot',
+                            //     'sort_order' => 2,
+                            //     'is_active' => true,
+                            // ],
 
-                            [
-                                'name' => 'Role',
-                                'slug' => 'role',
-                                'route' => '/admin/roles',
-                                'permission' => 'role.view',
-                                'icon' => 'CircleDot',
-                                'sort_order' => 3,
-                                'is_active' => true,
-                            ],
+                            // [
+                            //     'name' => 'Role',
+                            //     'slug' => 'role',
+                            //     'route' => '/admin/roles',
+                            //     'permission' => 'role.view',
+                            //     'icon' => 'CircleDot',
+                            //     'sort_order' => 3,
+                            //     'is_active' => true,
+                            // ],
 
                         ],
                     ],

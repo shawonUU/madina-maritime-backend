@@ -1,14 +1,16 @@
 <?php
-namespace Modules\Reception\Http\Controllers;
+namespace Modules\Reception\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Modules\Approval\Services\ApprovalService;
-use Modules\Reception\Models\GatePass;
-use Modules\Reception\Models\GatePassItem;
+use Modules\Reception\App\Models\GatePass;
+use Modules\Reception\App\Models\GatePassItem;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 class GatePassController extends Controller
 {
     public function index(Request $request)

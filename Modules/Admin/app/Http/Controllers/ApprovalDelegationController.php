@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Admin\Http\Controllers;
+namespace Modules\Admin\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Modules\Approval\Models\ApprovalDelegation;
+use Modules\Approval\App\Models\ApprovalDelegation;
 
 class ApprovalDelegationController extends Controller
 {

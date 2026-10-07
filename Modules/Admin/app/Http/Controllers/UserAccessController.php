@@ -1,14 +1,14 @@
 <?php
 
-namespace Modules\Admin\Http\Controllers;
+namespace Modules\Admin\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
-use Modules\Admin\Models\Module;
-use Modules\Admin\Models\User;
-use Modules\Admin\Models\UserAccess;
+use Modules\Admin\App\Models\Module;
+use Modules\Admin\App\Models\User;
+use Modules\Admin\App\Models\UserAccess;
 
 class UserAccessController extends Controller
 {

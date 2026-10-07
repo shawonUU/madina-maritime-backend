@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Canteen\Http\Controllers\DashboardController;
-use Modules\Canteen\Http\Controllers\EmployeeMealController;
-use Modules\Canteen\Http\Controllers\MealRateController;
-use Modules\Canteen\Http\Controllers\MealReportController;
-use Modules\Canteen\Http\Controllers\MealTypeController;
-use Modules\Canteen\Http\Controllers\MealMenuController;
+use Modules\Canteen\App\Http\Controllers\DashboardController;
+use Modules\Canteen\App\Http\Controllers\EmployeeMealController;
+use Modules\Canteen\App\Http\Controllers\MealRateController;
+use Modules\Canteen\App\Http\Controllers\MealReportController;
+use Modules\Canteen\App\Http\Controllers\MealTypeController;
+use Modules\Canteen\App\Http\Controllers\MealMenuController;
 
 Route::middleware('auth:sanctum')->group(function () {
 

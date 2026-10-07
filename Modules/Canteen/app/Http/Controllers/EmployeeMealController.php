@@ -1,16 +1,16 @@
 <?php
 
-namespace Modules\Canteen\Http\Controllers;
+namespace Modules\Canteen\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
-use Modules\HRM\Models\User;
-use Modules\Canteen\Models\EmployeeMeal;
-use Modules\Canteen\Models\EmployeeMealItem;
-use Modules\Canteen\Models\MealType;
-use Modules\Canteen\Models\MealMenu;
+use Modules\HRM\App\Models\User;
+use Modules\Canteen\App\Models\EmployeeMeal;
+use Modules\Canteen\App\Models\EmployeeMealItem;
+use Modules\Canteen\App\Models\MealType;
+use Modules\Canteen\App\Models\MealMenu;
 
 use Carbon\Carbon;
 class EmployeeMealController extends Controller

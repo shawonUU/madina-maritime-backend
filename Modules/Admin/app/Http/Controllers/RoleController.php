@@ -1,10 +1,10 @@
 <?php
-namespace Modules\Admin\Http\Controllers;
+namespace Modules\Admin\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Modules\Admin\Models\User;
+use Modules\Admin\App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 

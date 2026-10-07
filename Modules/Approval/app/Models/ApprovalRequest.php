@@ -1,14 +1,14 @@
 <?php
 
-namespace Modules\Approval\Models;
+namespace Modules\Approval\App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Modules\Admin\Models\User;
-use Modules\Approval\Models\ApprovalAction;
-use Modules\Approval\Models\ApprovalRequestLevel;
-use Modules\Approval\Models\ApprovalWorkflow;
+use Modules\Admin\App\Models\User;
+use Modules\Approval\App\Models\ApprovalAction;
+use Modules\Approval\App\Models\ApprovalRequestLevel;
+use Modules\Approval\App\Models\ApprovalWorkflow;
 
 
 class ApprovalRequest extends Model

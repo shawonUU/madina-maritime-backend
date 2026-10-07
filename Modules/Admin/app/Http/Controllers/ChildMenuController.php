@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Admin\Http\Controllers;
+namespace Modules\Admin\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Modules\Admin\Models\ChildMenu;
-use Modules\Admin\Models\Menu;
+use Modules\Admin\App\Models\ChildMenu;
+use Modules\Admin\App\Models\Menu;
 
 class ChildMenuController extends Controller
 {

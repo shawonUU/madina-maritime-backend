@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Canteen\Providers;
+namespace Modules\Canteen\App\Providers;
 
 use Nwidart\Modules\Support\ModuleServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;

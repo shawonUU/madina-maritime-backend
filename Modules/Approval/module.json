@@ -5,7 +5,7 @@
     "keywords": [],
     "priority": 0,
     "providers": [
-        "Modules\\Approval\\Providers\\ApprovalServiceProvider"
+        "Modules\\Approval\\App\\Providers\\ApprovalServiceProvider"
     ],
     "files": []
 }

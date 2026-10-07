@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Approval\Http\Controllers\ApprovalController;
-use Modules\Approval\Http\Controllers\ApprovalDelegationController;
-use Modules\Approval\Http\Controllers\ApprovalWorkflowController;
+use Modules\Approval\App\Http\Controllers\ApprovalController;
+use Modules\Approval\App\Http\Controllers\ApprovalDelegationController;
+use Modules\Approval\App\Http\Controllers\ApprovalWorkflowController;
 
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     Route::apiResource('approvals', ApprovalController::class)->names('approval');

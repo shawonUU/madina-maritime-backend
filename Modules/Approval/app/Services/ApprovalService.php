@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Approval\Services;
+namespace Modules\Approval\App\Services;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
-use Modules\Admin\Models\User;
-use Modules\Approval\Models\ApprovalAction;
-use Modules\Approval\Models\ApprovalDelegation;
-use Modules\Approval\Models\ApprovalRequest;
-use Modules\Approval\Models\ApprovalRequestLevel;
-use Modules\Approval\Models\ApprovalWorkflow;
+use Modules\Admin\App\Models\User;
+use Modules\Approval\App\Models\ApprovalAction;
+use Modules\Approval\App\Models\ApprovalDelegation;
+use Modules\Approval\App\Models\ApprovalRequest;
+use Modules\Approval\App\Models\ApprovalRequestLevel;
+use Modules\Approval\App\Models\ApprovalWorkflow;
 
 class ApprovalService
 {

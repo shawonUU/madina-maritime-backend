@@ -1,16 +1,17 @@
 <?php
 
-namespace Modules\HRM\Http\Controllers;
+namespace Modules\HRM\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
-use Modules\Admin\Models\User;
-use Modules\HRM\Models\Employee;
+use Modules\Admin\App\Models\User;
+use Modules\HRM\App\Models\Employee;
 use Spatie\Permission\Models\Role;
 
+use Illuminate\Support\Facades\Route;
 class EmployeeController extends Controller
 {
     /**

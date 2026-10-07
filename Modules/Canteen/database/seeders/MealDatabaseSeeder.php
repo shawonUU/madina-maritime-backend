@@ -3,7 +3,7 @@
 namespace Modules\Canteen\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Canteen\Models\MealType;
+use Modules\Canteen\App\Models\MealType;
 
 class MealDatabaseSeeder extends Seeder
 {
