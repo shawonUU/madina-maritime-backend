@@ -11,6 +11,14 @@ use Modules\Admin\App\Models\UserAccess;
 use Modules\Admin\Database\Seeders\MenuSeeder;
 use Modules\Canteen\Database\Seeders\MealDatabaseSeeder;
 use Modules\HRM\Database\Seeders\RecruitmentEmailTemplateSeeder;
+use Modules\Website\Database\Seeders\AboutPageSeeder;
+use Modules\Website\Database\Seeders\ContactSettingSeeder;
+use Modules\Website\Database\Seeders\WebsiteCareerSettingSeeder;
+use Modules\Website\Database\Seeders\WebsiteCustomerSeeder;
+use Modules\Website\Database\Seeders\WebsiteHomeSettingSeeder;
+use Modules\Website\Database\Seeders\WebsiteServicesSeeder;
+use Modules\Website\Database\Seeders\WebsiteSisterConcernSeeder;
+use Modules\Website\Database\Seeders\WebsiteVendorPartnerSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -42,7 +50,7 @@ class DatabaseSeeder extends Seeder
             MenuSeeder::class,
         ]);
 
-/*
+        /*
         |--------------------------------------------------------------------------
         | Recruitment Email Template Seeder
         |--------------------------------------------------------------------------
@@ -50,6 +58,92 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RecruitmentEmailTemplateSeeder::class,
         ]);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | About Page Seeder
+        |--------------------------------------------------------------------------
+        */
+        $this->call([
+            AboutPageSeeder::class,
+        ]);
+
+        /*
+        |--------------------------------------------------------------------------
+        | Sister Concern Seeder
+        |--------------------------------------------------------------------------
+        */
+
+        $this->call([
+            WebsiteSisterConcernSeeder::class,
+        ]);
+
+        /*
+        |--------------------------------------------------------------------------
+        | Service Seeder
+        |--------------------------------------------------------------------------
+        */
+
+        $this->call([
+            WebsiteServicesSeeder::class,
+        ]);
+
+                /*
+        |--------------------------------------------------------------------------
+        | Customer Seeder
+        |--------------------------------------------------------------------------
+        */
+
+        $this->call([
+            WebsiteCustomerSeeder::class,
+        ]);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Vendor And Partner Seeder
+        |--------------------------------------------------------------------------
+        */
+
+        $this->call([
+            WebsiteVendorPartnerSeeder::class,
+        ]);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Contact Seeder
+        |--------------------------------------------------------------------------
+        */
+
+        $this->call([
+            ContactSettingSeeder::class,
+        ]);
+
+
+                /*
+        |--------------------------------------------------------------------------
+        | Career Seeder
+        |--------------------------------------------------------------------------
+        */
+
+        $this->call([
+            WebsiteCareerSettingSeeder::class,
+        ]);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Career Seeder
+        |--------------------------------------------------------------------------
+        */
+
+        $this->call([
+            WebsiteHomeSettingSeeder::class,
+        ]);
+
+        
 
 
         /*

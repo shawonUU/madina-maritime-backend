@@ -287,16 +287,129 @@ class MenuSeeder extends Seeder
                 ],
             ],
 
+
+
+            
             /*
             |--------------------------------------------------------------------------
-            | Admin
+            | Website
+            |--------------------------------------------------------------------------
+            */
+            [
+                'name' => 'Website',
+                'slug' => 'website',
+                'icon' => '',
+                'sort_order' => 5,
+                'is_active' => true,
+
+                'menus' => [
+                    [
+                        'name' => 'Home',
+                        'slug' => 'home',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 1,
+                        'is_active' => true,
+
+                    ],
+                    [
+                        'name' => 'About',
+                        'slug' => 'about',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 2,
+                        'is_active' => true,
+
+                    ],
+                    [
+                        'name' => 'Sister Concern',
+                        'slug' => 'sister-concern',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 3,
+                        'is_active' => true,
+                    ],
+
+                    [
+                        'name' => 'Services',
+                        'slug' => 'services',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 4,
+                        'is_active' => true,
+                    ],
+
+                    [
+                        'name' => 'Customer',
+                        'slug' => 'customer',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 5,
+                        'is_active' => true,
+                    ],
+
+                    [
+                        'name' => 'Vendor & Partners',
+                        'slug' => 'vendor-and-partners',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 6,
+                        'is_active' => true,
+                    ],
+
+                    [
+                        'name' => 'Career',
+                        'slug' => 'career',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 7,
+                        'is_active' => true,
+                    ],
+
+                    [
+                        'name' => 'Contact',
+                        'slug' => 'contact',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 8,
+                        'is_active' => true,
+                    ],
+
+
+                    [
+                        'name' => 'Contact Enquiries',
+                        'slug' => 'contact-enquiries',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 9,
+                        'is_active' => true,
+                    ],
+
+
+                    
+
+                ],
+            ],
+
+            /*
+            |--------------------------------------------------------------------------
+            | Settings
             |--------------------------------------------------------------------------
             */
             [
                 'name' => 'Settings',
                 'slug' => 'settings',
                 'icon' => 'Settings',
-                'sort_order' => 5,
+                'sort_order' => 6,
                 'is_active' => true,
 
                 'menus' => [
@@ -391,6 +504,8 @@ class MenuSeeder extends Seeder
 
                 ],
             ],
+
+
         ];
 
 

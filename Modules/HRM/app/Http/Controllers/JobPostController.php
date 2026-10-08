@@ -57,7 +57,7 @@ class JobPostController extends Controller
             'sort_order' => ['nullable', 'integer'],
         ]);
 
-        $validated['slug'] = $this->generateUniqueSlug($validated['title'],$jobPost->id);
+        $validated['slug'] = $this->generateUniqueSlug($validated['title']);
 
         $job = JobPost::create($validated);
 
