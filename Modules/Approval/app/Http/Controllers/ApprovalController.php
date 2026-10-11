@@ -5,7 +5,7 @@ namespace Modules\Approval\App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Modules\Approval\App\Models\ApprovalRequest;
-use Modules\Approval\Services\ApprovalService;
+use Modules\Approval\App\Services\ApprovalService;
 
 class ApprovalController extends Controller
 {
