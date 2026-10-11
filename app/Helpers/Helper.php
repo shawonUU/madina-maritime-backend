@@ -1,6 +1,7 @@
 <?php
 
-use Modules\Approval\Models\ApprovalWorkflow;
+use Modules\Approval\App\Models\ApprovalWorkflow;
+
 
 if (! function_exists('moduleId')) {
     function moduleId(): ?int{

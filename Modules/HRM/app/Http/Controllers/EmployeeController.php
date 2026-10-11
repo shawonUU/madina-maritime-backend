@@ -78,11 +78,11 @@ class EmployeeController extends Controller
                 'boolean',
             ],
 
-            'role_id' => [
-                'required_if:create_user,true',
-                'nullable',
-                'exists:roles,id',
-            ],
+            // 'role_id' => [
+            //     'required_if:create_user,true',
+            //     'nullable',
+            //     'exists:roles,id',
+            // ],
 
             'user_password' => [
                 'required_if:create_user,true',
@@ -104,9 +104,9 @@ class EmployeeController extends Controller
                 'status' => $validated['status'] ?? 'Active',
             ]);
 
-            $employee->update([
-                'employee_code' => 'EMP-' . str_pad($employee->id, 6, '0', STR_PAD_LEFT),
-            ]);
+            // $employee->update([
+            //     'employee_code' => 'EMP-' . str_pad($employee->id, 6, '0', STR_PAD_LEFT),
+            // ]);
 
             if (!empty($validated['create_user'])) {
                 $user = User::create([
@@ -118,8 +118,8 @@ class EmployeeController extends Controller
                     'status' => 'Active',
                 ]);
 
-                $role = Role::findOrFail($validated['role_id']);
-                $user->assignRole($role);
+                // $role = Role::findOrFail($validated['role_id']);
+                // $user->assignRole($role);
             }
 
             return $employee;
@@ -212,11 +212,11 @@ class EmployeeController extends Controller
                 'boolean',
             ],
 
-            'role_id' => [
-                'required_if:create_user,true',
-                'nullable',
-                'exists:roles,id',
-            ],
+            // 'role_id' => [
+            //     'required_if:create_user,true',
+            //     'nullable',
+            //     'exists:roles,id',
+            // ],
 
             'user_password' => [
                 'nullable',
@@ -273,8 +273,8 @@ class EmployeeController extends Controller
                     ]);
                 }
 
-                $role = Role::findOrFail($validated['role_id']);
-                $user->syncRoles($role);
+                // $role = Role::findOrFail($validated['role_id']);
+                // $user->syncRoles($role);
 
             } elseif ($employee->user) {
 

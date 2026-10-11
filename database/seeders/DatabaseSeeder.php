@@ -154,16 +154,12 @@ class DatabaseSeeder extends Seeder
 
         $admin = User::updateOrCreate(
             [
-                'email' => 'sawonmiah@madina.co',
+                'email' => 'admin@gmail.com',
             ],
             [
                 'code' => getGenerateCode(
-                    User::class,
-                    'code',
-                    'USR',
-                    8
-                ),
-                'name' => 'Md. Sawon Miah',
+                    User::class,'code','USR'),
+                'name' => 'Admin User',
                 'password' => Hash::make('12345678'),
             ]
         );
@@ -174,39 +170,6 @@ class DatabaseSeeder extends Seeder
         | Other Users
         |--------------------------------------------------------------------------
         */
-
-        User::updateOrCreate(
-            [
-                'email' => 'mojmeen@gmail.com',
-            ],
-            [
-                'code' => getGenerateCode(
-                    User::class,
-                    'code',
-                    'USR',
-                    8
-                ),
-                'name' => 'Mojmeen Akther',
-                'password' => Hash::make('12345678'),
-            ]
-        );
-
-
-        User::updateOrCreate(
-            [
-                'email' => 'hr@gmail.com',
-            ],
-            [
-                'code' => getGenerateCode(
-                    User::class,
-                    'code',
-                    'USR',
-                    8
-                ),
-                'name' => 'Jannatul Ferdous',
-                'password' => Hash::make('12345678'),
-            ]
-        );
 
 
         /*

@@ -32,7 +32,7 @@ Route::prefix('careers')->group(function () {
 });
 
 
-    Route::middleware('auth:sanctum')->prefix('hrm/recruitment')->group(function () {
+    Route::prefix('hrm/recruitment')->group(function () {
         Route::apiResource( 'job-posts', JobPostController::class );
         Route::get( 'applications', [JobApplicationController::class, 'index'] );
         Route::get( 'applications/{jobApplication}', [JobApplicationController::class, 'show'] );
@@ -46,8 +46,7 @@ Route::prefix('careers')->group(function () {
     });
 
 
-    Route::middleware('auth:sanctum')
-    ->prefix('hrm/recruitment')
+    Route::prefix('hrm/recruitment')
     ->group(function () {
 
         Route::apiResource(

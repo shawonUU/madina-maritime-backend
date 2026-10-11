@@ -231,27 +231,27 @@ class MenuSeeder extends Seeder
 
                 'menus' => [
 
-                    // [
-                    //     'name' => 'Employee Management',
-                    //     'slug' => 'employee-management',
-                    //     'route' => null,
-                    //     'permission' => null,
-                    //     'icon' => 'Circle',
-                    //     'sort_order' => 1,
-                    //     'is_active' => true,
+                    [
+                        'name' => 'Employee Management',
+                        'slug' => 'employee-management',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 1,
+                        'is_active' => true,
 
-                    //     'child_menus' => [
-                    //         [
-                    //             'name' => 'Employee List',
-                    //             'slug' => 'employee-list',
-                    //             'route' => '/hrm/employees',
-                    //             'permission' => 'employee.view',
-                    //             'icon' => 'CircleDot',
-                    //             'sort_order' => 1,
-                    //             'is_active' => true,
-                    //         ],
-                    //     ],
-                    // ],
+                        'child_menus' => [
+                            [
+                                'name' => 'Employee List',
+                                'slug' => 'employee-list',
+                                'route' => '/hrm/employees',
+                                'permission' => 'employee.view',
+                                'icon' => 'CircleDot',
+                                'sort_order' => 1,
+                                'is_active' => true,
+                            ],
+                        ],
+                    ],
 
                     [
                         'name' => 'Recruitment',

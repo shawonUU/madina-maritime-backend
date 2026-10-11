@@ -65,7 +65,7 @@ Route::prefix('website')->group(function () {
         'store'
     ]);
 
-    Route::put('/about/stats/{id}', [
+    Route::post('/about/stats/{id}', [
         WebsiteAboutStatController::class,
         'update'
     ]);
@@ -107,7 +107,7 @@ Route::get(
     [SisterConcernController::class, 'index']
 );
 
-Route::middleware('auth:sanctum')->prefix('website/admin')->group(function () {
+Route::prefix('website/admin')->group(function () {
 
     Route::get(
         '/sister-concerns',
