@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use Modules\Admin\App\Models\User;
 use Modules\Admin\App\Models\UserAccess;
 
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
 class AuthController extends Controller
 {
     /**
@@ -143,6 +145,68 @@ class AuthController extends Controller
         return response()->json([
             'message' => 'Logged out successfully'
         ]);
+    }
+
+    public function forgotPassword(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+
+        $status = Password::broker()->sendResetLink(
+            $request->only('email')
+        );
+
+        if ($status === Password::RESET_LINK_SENT) {
+            return response()->json([
+                'message' => 'Password reset link sent to your email.',
+            ]);
+        }
+
+        if ($status === Password::RESET_THROTTLED) {
+            return response()->json([
+                'message' => 'Please wait before requesting another reset link.',
+            ], 429);
+        }
+
+        return response()->json([
+            'message' => 'Unable to send password reset link.',
+        ], 422);
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $request->validate([
+            'token' => 'required|string',
+            'email' => 'required|email',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $status = Password::broker()->reset(
+            $request->only(
+                'email',
+                'password',
+                'password_confirmation',
+                'token'
+            ),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password),
+                ])->setRememberToken(Str::random(60));
+
+                $user->save();
+            }
+        );
+
+        if ($status === Password::PASSWORD_RESET) {
+            return response()->json([
+                'message' => 'Password reset successfully.',
+            ]);
+        }
+
+        return response()->json([
+            'message' => 'Invalid or expired password reset token.',
+        ], 422);
     }
 
 }
