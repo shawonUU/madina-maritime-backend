@@ -11,53 +11,41 @@ use Modules\Admin\App\Http\Controllers\UserAccessController;
 use Modules\Admin\App\Http\Controllers\UserController;
 use Modules\Admin\App\Http\Controllers\UserPermissionController;
 
-
-// Public routes
 Route::prefix('auth')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/register', [AuthController::class, 'register']);
-
     Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
     Route::post('/reset-password', [AuthController::class, 'resetPassword']);
 });
 
-// Protected routes (Sanctum à¦²à¦¾à¦—à¦¬à§‡)
 Route::middleware('auth:sanctum')->prefix('auth')->group(function () {
     Route::get('/me', [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/change-password', [AuthController::class, 'changePassword']);
 });
 
-Route::prefix('admin')->group(function () {
+Route::middleware('auth:sanctum')->prefix('admin')->group(function () {
     Route::apiResource('modules', ModuleController::class);
     Route::apiResource('menus', MenuController::class);
     Route::apiResource('child-menus', ChildMenuController::class);
-    Route::apiResource('users', UserController::class)->names('user');
+
+    Route::apiResource('users', UserController::class);
+    Route::get('/users-list', [UserController::class, 'userList']);
+    Route::get('/users/{user}/access', [UserAccessController::class, 'show']);
+    Route::put('/users/{user}/access', [UserAccessController::class, 'update']);
+
     Route::apiResource('roles', RoleController::class);
     Route::apiResource('permissions', PermissionController::class);
-    Route::get( '/users/{user}/access', [UserAccessController::class, 'show']);
-    Route::put('/users/{user}/access',  [UserAccessController::class, 'update'] );
 });
 
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('user/assign-permission', [
+        UserPermissionController::class,
+        'assignPermission',
+    ]);
 
-// User Role
-// Route::post(
-//     'user/assign-role',
-//     [UserRoleController::class,'assignRole']
-// );
-
-// Route::post(
-//     'user/remove-role',
-//     [UserRoleController::class,'removeRole']
-// );
-
-
-// User Permission
-Route::post(
-    'user/assign-permission',
-    [UserPermissionController::class,'assignPermission']
-);
-
-Route::post(
-    'user/remove-permission',
-    [UserPermissionController::class,'removePermission']
-);
+    Route::post('user/remove-permission', [
+        UserPermissionController::class,
+        'removePermission',
+    ]);
+});

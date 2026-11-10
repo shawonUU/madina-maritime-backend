@@ -413,6 +413,15 @@ class MenuSeeder extends Seeder
                 'is_active' => true,
 
                 'menus' => [
+                    [
+                        'name' => 'User Management',
+                        'slug' => 'user-management',
+                        'route' => null,
+                        'permission' => null,
+                        'icon' => 'Circle',
+                        'sort_order' => 1,
+                        'is_active' => true,
+                    ],
 
                     [
                         'name' => 'System Management',
@@ -420,7 +429,7 @@ class MenuSeeder extends Seeder
                         'route' => null,
                         'permission' => null,
                         'icon' => 'Circle',
-                        'sort_order' => 1,
+                        'sort_order' => 2,
                         'is_active' => true,
 
                         'child_menus' => [
@@ -464,7 +473,7 @@ class MenuSeeder extends Seeder
                         'route' => null,
                         'permission' => null,
                         'icon' => 'Circle',
-                        'sort_order' => 2,
+                        'sort_order' => 3,
                         'is_active' => true,
 
                         'child_menus' => [
