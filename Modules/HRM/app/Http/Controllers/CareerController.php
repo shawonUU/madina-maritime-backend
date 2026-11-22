@@ -57,7 +57,7 @@ class CareerController extends Controller
 
         if (
             $jobPost->application_deadline &&
-            $jobPost->application_deadline->isPast()
+            $jobPost->application_deadline->toDateString() < now()->toDateString()
         ) {
             return response()->json([
                 'message' => 'The application deadline has passed.',
